@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface RegionRepository extends CrudRepository<RegionEntity, Integer> {
-    @Override
+
     Optional<RegionEntity> findByRegionKey(String key);
 
     boolean existsByRegionKey(String key);

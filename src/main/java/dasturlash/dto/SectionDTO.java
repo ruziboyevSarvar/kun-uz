@@ -8,13 +8,14 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class CategoryDTO {
+public class SectionDTO {
     private Integer id;
     private Integer orderNumber;
     private String nameUz;
     private String nameRu;
     private String nameEn;
-    private String categoryKey;
+    private String sectionKey;
     private Boolean visible;
     private LocalDateTime createdDate;
+    private UUID imageId;
 }
