@@ -1,0 +1,22 @@
+package dasturlash.controller;
+
+import dasturlash.dto.ProfileDTO;
+import dasturlash.entity.ProfileEntity;
+import dasturlash.entity.ProfileRoleEntity;
+import dasturlash.service.ProfileService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+public class ProfileController {
+
+    @Autowired
+    private ProfileService profileService;
+
+    @PostMapping("/create")
+    public ResponseEntity<ProfileEntity> create(@RequestBody ProfileDTO dto) {
+        ProfileEntity result = profileService.create(dto);
+        return ResponseEntity.ok(result);
+    }
+}
